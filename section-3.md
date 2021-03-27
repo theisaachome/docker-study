@@ -1,26 +1,27 @@
-## **Section 02: Creating and Using Containers**
+## **Section 03: Container Images: Where To Find Them and How To Build Them**
 
 ## Table of Contents
 
-- [**Section 02 : Creating and Using Container**](#section-02-creating-and-using-container)
+- [**Section 03 : Container Images Where To Find Them and How To Build Them**](#section-03-container-images-where-to-find-them-and-how-to-build-them)
 - [Table of Contents](#table-of-content)
-  - [Images Vs Containers](#image-vs-container)
+  - [What's in an image](#what's-in-an-image)
   - [What happens When we run a Container](#what-happens-when-we-run-a-container)
   - [lab](#lab)
   - [What's Going On In Container](#what's-going-on-in-container)
   - [Getting A Shell Inside Containers](#Getting-a-shell-inside-containers)
   - [Docker Networks: Concepts](#docker-networks-concepts)
 
-## Image Vs Container
+## What's in an image
 
-- an Image is the application we want to run
-- A Container is an innstance of that image running as a process
-- There can be many Container running off the same single images.
-- Example Image
-
-  - Nginx Web Server
-
-- [Docker's default images "registery" is called Docker hub](hub.docker.com)
+- App binaries and dependencies.
+- Metadata about the image data and how to run the image.
+- Not Complete OS.
+- No kernel
+- No kernel moudles (e.g. drivers)
+- It can be small as ONE file (your app binary) like
+  a golang static binary
+- Big as a Ubuntu distro with apt, and Apache, PHP
+  and more installed.
 
 ### running Nginx Web Server
 
